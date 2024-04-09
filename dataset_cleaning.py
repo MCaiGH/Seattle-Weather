@@ -157,7 +157,7 @@ df_temp['Precipitation'] = df_temp['Precipitation'].round(3)
 """Drop the temporary column"""
 
 df_tidy.drop(columns=['MONTH'], inplace=True)
-df_tidy
+df_tidy #check if the column is deleted
 
 """Test if NaN replacement worked"""
 
