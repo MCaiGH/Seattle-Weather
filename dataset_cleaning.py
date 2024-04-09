@@ -129,6 +129,11 @@ df_tidy = pd.melt(df_port_merge, id_vars = "DATE", var_name = "CITY", value_name
 
 print(df_tidy['CITY'].value_counts())
 
+"""Check for duplicate entries"""
+duplicate_entries = df_tidy[df_tidy.duplicated()]
+
+print(duplicate_entries)
+
 """Rename City variables accordingly"""
 
 df_tidy.loc[df_tidy['CITY'] == 'PRCP_x','CITY'] = 'NYC'
