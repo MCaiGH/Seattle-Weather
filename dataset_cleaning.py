@@ -125,14 +125,16 @@ df_port_merge.head(20)
 
 df_tidy = pd.melt(df_port_merge, id_vars = "DATE", var_name = "CITY", value_name = "Precipitation")
 
+
+"""Check for duplicate entries drop if found"""
+df_tidy = df_tidy.drop_duplicates()
+df_tidy = df_tidy.reset_index(drop=True)
+
+print(df_tidy)
+
 """Ensure counts of both cities are equal"""
 
 print(df_tidy['CITY'].value_counts())
-
-"""Check for duplicate entries"""
-duplicate_entries = df_tidy[df_tidy.duplicated()]
-
-print(duplicate_entries)
 
 """Rename City variables accordingly"""
 
