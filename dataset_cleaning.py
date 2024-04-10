@@ -138,9 +138,9 @@ print(df_tidy['CITY'].value_counts())
 
 """Rename City variables accordingly"""
 
-df_tidy.loc[df_tidy['CITY'] == 'PRCP_x','CITY'] = 'NYC'
+df_tidy.loc[df_tidy['CITY'] == 'PRCP_x','CITY'] = 'Seattle'
 
-df_tidy.loc[df_tidy['CITY'] == 'PRCP_y','CITY'] = 'Seattle'
+df_tidy.loc[df_tidy['CITY'] == 'PRCP_y','CITY'] = 'NYC'
 
 df_tidy
 
